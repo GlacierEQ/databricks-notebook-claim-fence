@@ -1,0 +1,16 @@
+{
+  "schema": "glaciereq.operability-receipt.v1",
+  "repository": "GlacierEQ/databricks-notebook-claim-fence",
+  "at": "2026-08-09T22:37Z",
+  "source_sha": "bcd6a8a76c1e801c50d42c7cd426820e305a8eb9972934f32648250b244aa9a1",
+  "entry": "scripts/operate.py",
+  "primary_output": {
+    "claim_ok": false,
+    "expected_reason": "UNPROMOTED_PRODUCTION_CLAIM",
+    "ok": true,
+    "reason": "UNPROMOTED_PRODUCTION_CLAIM"
+  },
+  "dual_run_ok": true,
+  "result": "PASS",
+  "scratch_launch_log": "wave_b/databricks-notebook-claim-fence/launch.log"
+}

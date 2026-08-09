@@ -1,0 +1,10 @@
+{
+  "schema": "glaciereq.promotion-authority-grant.v1",
+  "repository": "GlacierEQ/databricks-notebook-claim-fence",
+  "source_sha": "bcd6a8a76c1e801c50d42c7cd426820e305a8eb9972934f32648250b244aa9a1",
+  "proof_receipt_digest": "7cddf42ffc48fba273b42edcc01c6b21e59aecbeeb269ca0c5a8dd204899b02e",
+  "not_after": 1786401439.758687,
+  "mac": "327c2df2637e9047e392ee9990003db8b8d7c2539356707fac97fc2392ab9d6f",
+  "issuer": "local_operator_promotion_authority",
+  "verified": true
+}
