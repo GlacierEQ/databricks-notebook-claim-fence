@@ -1,8 +1,9 @@
 {
   "schema": "glaciereq.operability-receipt.v1",
   "repository": "GlacierEQ/databricks-notebook-claim-fence",
-  "at": "2026-08-09T22:37Z",
-  "source_sha": "bcd6a8a76c1e801c50d42c7cd426820e305a8eb9972934f32648250b244aa9a1",
+  "at": "2026-08-09T22:57Z",
+  "source_sha": "709ada2f16f26b67732c42a1e1625b4053e5082edd9c014518160f34e3778529",
+  "source_sha_algorithm": "sha256(newline_join('{rel}:{sha256(bytes)}' for src|scripts|tests .py/.md/.json))",
   "entry": "scripts/operate.py",
   "primary_output": {
     "claim_ok": false,
