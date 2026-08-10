@@ -1,1 +1,23 @@
-{"capabilities": ["hyper-scaling"]}
+{
+  "schema": "glaciereq.repo-capabilities.v1",
+  "repository": "GlacierEQ/databricks-notebook-claim-fence",
+  "capability_family": "notebook_artifact_claim_promotion",
+  "capabilities": [
+    "provisional-notebook-artifacts",
+    "evaluation-receipt-gated-promotion",
+    "owner-bound-promotion-authority",
+    "content-addressed-artifact-identity",
+    "unpromoted-production-claim-refusal",
+    "explicit-artifact-promotion-state"
+  ],
+  "evidence_refs": [
+    "src/notebook_fence.py",
+    "sql/artifacts.sql",
+    "tests/test_notebook_fence.py",
+    "tests/test_adversarial.py",
+    "tests/test_sql_fixture.py",
+    "machine/proof_receipt.json",
+    "machine/canonical-position.json"
+  ],
+  "truth_boundary": "Repository-local notebook claim-governance mechanisms only. No Databricks adoption, production notebook governance deployment, or company-internal architecture is implied."
+}
