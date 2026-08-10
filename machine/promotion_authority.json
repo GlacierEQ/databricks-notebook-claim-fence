@@ -1,12 +1,11 @@
 {
   "schema": "glaciereq.promotion-authority-grant.v1",
   "repository": "GlacierEQ/databricks-notebook-claim-fence",
-  "source_sha": "709ada2f16f26b67732c42a1e1625b4053e5082edd9c014518160f34e3778529",
-  "proof_receipt_digest": "9259742408b8bf7cbce424749e6ab3b070700d2ad52445a9da650b8e8afeef30",
-  "not_after": 1788908261.7824872,
-  "mac": "a0550fb598b79a39b355c2003bf7860532e6d9e2da8f3ef95abf891dd1e22319",
+  "source_sha": "e1dca1085a45a2fa142f0a2b1568ab5ce9dcd78d90053035a445fca3d91ca56b",
+  "proof_receipt_digest": "4a03b727b6406af609bbca1578715a4482650d816b347abf20865cc8f3b16552",
+  "not_after": 1788927149.234226,
+  "mac": "69319e16975b32f315bc694e277af13c6b9b6e965fd15e41d19bbf58a7b058c0",
   "issuer": "local_operator_promotion_authority",
   "verified": true,
-  "verification_procedure": "LOCAL reference authority only. Secret constant: src/promotion_authority.py::LOCAL_OPERATOR_SECRET (= b'glaciereq-local-operator-promotion-authority-v1'). Verify: python3 scripts/verify_promotion_grant.py",
   "secret_ref": "src/promotion_authority.py::LOCAL_OPERATOR_SECRET"
 }

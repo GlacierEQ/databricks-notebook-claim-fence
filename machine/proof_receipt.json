@@ -1,21 +1,18 @@
 {
   "schema": "glaciereq.proof-receipt.v1",
   "repository": "GlacierEQ/databricks-notebook-claim-fence",
-  "source_sha": "709ada2f16f26b67732c42a1e1625b4053e5082edd9c014518160f34e3778529",
-  "source_sha_algorithm": "sha256(newline_join('{rel}:{sha256(bytes)}' for src|scripts|tests .py/.md/.json))",
-  "proof_id": "wave-b-fix-databricks-notebook-claim-fence-1786316261",
+  "source_sha": "e1dca1085a45a2fa142f0a2b1568ab5ce9dcd78d90053035a445fca3d91ca56b",
+  "proof_id": "elite-databricks-notebook-claim-fence-1786335149",
   "environment": {
-    "python": "3.9.6",
-    "PYTHONPATH": "."
+    "python": "/Users/kcbflux/job-app/excellence/.venv-elite/bin/python",
+    "PYTHONPATH": "/Users/kcbflux/job-app/repos/databricks-notebook-claim-fence:/Users/kcbflux/job-app/repos/databricks-notebook-claim-fence/src",
+    "entry": "unittest"
   },
   "tests": [
-    "PYTHONPATH=. python3 -m unittest discover -s tests -v (x2)"
+    "/Users/kcbflux/job-app/excellence/.venv-elite/bin/python -m unittest discover -s tests -v (x2)"
   ],
   "adversarial_tests": [
     "tests/test_adversarial.py"
-  ],
-  "authority_tests": [
-    "tests/test_promotion_authority.py::test_real_machine_grant_verifies_against_proof_receipt"
   ],
   "runtime": {
     "operate": "scripts/operate.py (x2)",
@@ -27,9 +24,8 @@
     "not production deployed",
     "reference implementation only"
   ],
-  "timestamp": "2026-08-09T22:57Z",
+  "timestamp": "2026-08-10T04:12Z",
   "artifact_hashes": {
-    "operability_receipt": "404bd679306bff6a947eec9f3dffcc0d19aae73c726cabbb3ceef5138cd0266a"
-  },
-  "scratch_proof_log": "wave_b/databricks-notebook-claim-fence/proof.log"
+    "operability_receipt": "c634d773331fa14a3e4671f8866536b95b5a04c869050e26420e79cbc91855ca"
+  }
 }

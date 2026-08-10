@@ -1,17 +1,28 @@
 {
   "schema": "glaciereq.operability-receipt.v1",
   "repository": "GlacierEQ/databricks-notebook-claim-fence",
-  "at": "2026-08-09T22:57Z",
-  "source_sha": "709ada2f16f26b67732c42a1e1625b4053e5082edd9c014518160f34e3778529",
-  "source_sha_algorithm": "sha256(newline_join('{rel}:{sha256(bytes)}' for src|scripts|tests .py/.md/.json))",
+  "at": "2026-08-10T04:12Z",
+  "source_sha": "e1dca1085a45a2fa142f0a2b1568ab5ce9dcd78d90053035a445fca3d91ca56b",
   "entry": "scripts/operate.py",
   "primary_output": {
-    "claim_ok": false,
-    "expected_reason": "UNPROMOTED_PRODUCTION_CLAIM",
+    "module": "notebook_fence",
     "ok": true,
-    "reason": "UNPROMOTED_PRODUCTION_CLAIM"
+    "repository": "GlacierEQ/databricks-notebook-claim-fence",
+    "smoke": {
+      "args": [
+        "'sample_cell_id'",
+        "'sample_eval_receipt'",
+        "'sample_owner_sign'"
+      ],
+      "content_checked": true,
+      "invoked": true,
+      "kind": "class",
+      "method": "promote",
+      "module_local": true,
+      "name": "NotebookClaimFence",
+      "result": "PromotionResult(ok=False, reason='UNKNOWN_CELL', artifact_digest='', state=<ArtifactState.REJECTED: 'REJECTED'>)"
+    }
   },
   "dual_run_ok": true,
-  "result": "PASS",
-  "scratch_launch_log": "wave_b/databricks-notebook-claim-fence/launch.log"
+  "result": "PASS"
 }
