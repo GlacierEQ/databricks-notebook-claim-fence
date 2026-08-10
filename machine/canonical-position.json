@@ -1,0 +1,22 @@
+{
+  "schema": "glaciereq.repo-canonical-position.v1",
+  "repository": "GlacierEQ/databricks-notebook-claim-fence",
+  "position_state": "RESOLVED",
+  "role": "company_specific_specialist_system",
+  "company_target": "Databricks",
+  "canonical_identity": "notebook-claim-fence",
+  "unique_value": [
+    "notebook cells emit provisional artifacts rather than production claims",
+    "promotion requires an evaluation receipt plus explicit owner authority",
+    "unpromoted notebook outputs are blocked from claim elevation"
+  ],
+  "capability_contribution": {
+    "family": "notebook_artifact_claim_promotion",
+    "extractable_mechanisms": ["provisional notebook artifacts", "eval-receipt promotion", "owner-bound claim authority"],
+    "ownership": "This repository remains the owning Databricks-specialist implementation; extraction preserves identity and lineage."
+  },
+  "integration_policy": {"preserve_repository_identity":true,"preserve_lineage":true,"presentation_independent":true,"size_or_loc_not_dispositive":true,"absorption_requires_functional_equivalence":true,"absorption_requires_proof_equivalence":true},
+  "next_evolution": "Add notebook-to-artifact lineage, policy-specific evaluation requirements, and multi-owner/quorum promotion for higher-risk model or feature claims.",
+  "evidence_refs": ["ISSUE_CONTRACT.md","machine/target-contract.json","machine/proof_receipt.json","machine/operability_receipt.json","machine/promotion_authority.json"],
+  "nonclaims": ["no Databricks affiliation", "not a production notebook governance service"]
+}
