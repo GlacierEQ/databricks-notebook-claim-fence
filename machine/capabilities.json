@@ -4,10 +4,17 @@
   "capability_family": "notebook_artifact_claim_promotion",
   "capabilities": [
     "provisional-notebook-artifacts",
-    "evaluation-receipt-gated-promotion",
-    "owner-bound-promotion-authority",
+    "notebook-to-artifact-source-lineage",
+    "immutable-cell-artifact-identity",
     "content-addressed-artifact-identity",
+    "evaluation-receipt-gated-promotion",
+    "artifact-content-bound-evaluation-receipts",
+    "policy-specific-evaluation-requirements",
+    "owner-bound-promotion-authority",
+    "unique-owner-quorum-promotion",
+    "promotion-proof-content-addressing",
     "unpromoted-production-claim-refusal",
+    "production-claim-policy-ceiling",
     "explicit-artifact-promotion-state"
   ],
   "evidence_refs": [
@@ -16,8 +23,8 @@
     "tests/test_notebook_fence.py",
     "tests/test_adversarial.py",
     "tests/test_sql_fixture.py",
-    "machine/proof_receipt.json",
+    "machine/evolution-receipts/2026-08-11-policy-quorum-artifact-promotion.json",
     "machine/canonical-position.json"
   ],
-  "truth_boundary": "Repository-local notebook claim-governance mechanisms only. No Databricks adoption, production notebook governance deployment, or company-internal architecture is implied."
+  "truth_boundary": "Repository-local notebook claim-governance mechanisms only. Notebook source SHA and owner/evaluator identities remain caller-supplied rather than externally authenticated. No Databricks adoption, production notebook governance deployment, or company-internal architecture is implied."
 }
