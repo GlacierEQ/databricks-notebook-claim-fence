@@ -26,19 +26,31 @@ class CanonicalPositionContractTests(unittest.TestCase):
         self.assertTrue(policy["absorption_requires_proof_equivalence"])
 
     def test_capabilities_name_repository_native_claim_fence_mechanisms(self):
-        self.assertEqual(
-            CAPABILITIES["capability_family"], "notebook_artifact_claim_promotion"
-        )
+        self.assertEqual(CAPABILITIES["capability_family"], "notebook_artifact_claim_promotion")
         capabilities = set(CAPABILITIES["capabilities"])
-        self.assertIn("provisional-notebook-artifacts", capabilities)
-        self.assertIn("evaluation-receipt-gated-promotion", capabilities)
-        self.assertIn("owner-bound-promotion-authority", capabilities)
-        self.assertIn("unpromoted-production-claim-refusal", capabilities)
+        for capability in (
+            "provisional-notebook-artifacts",
+            "evaluation-receipt-gated-promotion",
+            "owner-bound-promotion-authority",
+            "unpromoted-production-claim-refusal",
+            "notebook-to-artifact-source-lineage",
+            "policy-specific-evaluation-requirements",
+            "unique-owner-quorum-promotion",
+            "production-claim-policy-ceiling",
+        ):
+            self.assertIn(capability, capabilities)
         self.assertNotIn("hyper-scaling", capabilities)
 
     def test_evolution_and_claim_boundary_are_material(self):
-        self.assertTrue(STATE["evolution_cursor"].startswith("next:"))
-        self.assertIn("notebook-to-artifact lineage", POSITION["next_evolution"])
+        self.assertEqual(
+            POSITION["completed_evolution"]["cursor"],
+            "next:notebook_to_artifact_lineage_policy_specific_evaluation_multi_owner_quorum_promotion",
+        )
+        self.assertEqual(
+            STATE["evolution_cursor"],
+            "next:cryptographically_authenticated_owner_evaluator_identity_external_notebook_source_attestation_and_promotion_revocation",
+        )
+        self.assertIn("Cryptographically authenticate", POSITION["next_evolution"])
         self.assertIn("no Databricks affiliation", POSITION["nonclaims"])
         self.assertIn("No Databricks adoption", CAPABILITIES["truth_boundary"])
 
