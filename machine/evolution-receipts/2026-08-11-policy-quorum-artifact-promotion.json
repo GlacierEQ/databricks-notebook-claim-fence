@@ -1,0 +1,31 @@
+{
+  "schema": "glaciereq.repo-evolution-receipt.v1",
+  "repository": "GlacierEQ/databricks-notebook-claim-fence",
+  "consumed_cursor": "next:notebook_to_artifact_lineage_policy_specific_evaluation_multi_owner_quorum_promotion",
+  "candidate_source_sha": "7918388dcc2b1adc5bcaaf785db75078130c33c7",
+  "workflow_run": 31465174449,
+  "result": "PASS",
+  "observed_lanes": {
+    "python_unittest": "PASS"
+  },
+  "verified_mechanisms": [
+    "exact notebook source and payload identity are bound into immutable artifact lineage",
+    "cell IDs are one-shot: exact rerecord is idempotent while source or payload rebinding fails closed",
+    "promotion policies bind claim tier, required evaluation checks, and positive distinct-owner quorum",
+    "evaluation receipts bind exact artifact digest and exact policy identity",
+    "owner approvals bind exact artifact digest and policy identity and duplicate owner IDs do not inflate quorum",
+    "promotion proof content-addresses artifact lineage, policy, evaluation receipts, and distinct owner approvals",
+    "exact promotion replay is idempotent while materially different proof cannot rebind an already promoted artifact",
+    "BOUNDED-tier promotion cannot support a production claim",
+    "legacy unbound notebook artifacts cannot promote",
+    "SQL normalizes notebook lineage, policy requirements, evaluation receipts/checks, and owner approvals"
+  ],
+  "boundaries": [
+    "notebook source SHA is caller-supplied rather than externally attested",
+    "owner and evaluator identities are structured claims rather than cryptographically authenticated identities",
+    "promotion revocation is not implemented",
+    "no Databricks affiliation or adoption",
+    "not a production notebook governance service"
+  ],
+  "next_cursor": "next:cryptographically_authenticated_owner_evaluator_identity_external_notebook_source_attestation_and_promotion_revocation"
+}

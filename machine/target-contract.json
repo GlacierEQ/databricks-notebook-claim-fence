@@ -2,21 +2,50 @@
   "schema": "glaciereq.repo-target-contract.v1",
   "identity": {
     "repository_id": "GlacierEQ/databricks-notebook-claim-fence",
-    "family": "elite-estate"
+    "family": "elite-estate",
+    "canonical_identity": "notebook-claim-fence"
   },
   "current": {
-    "state": "PROMOTED",
+    "state": "EVOLVING",
     "implemented": true,
     "tested": true,
-    "deployed": false
+    "deployed": false,
+    "evolution_generation": 1
   },
-  "nonclaims": [
-    "no employer affiliation",
-    "no production deployment without receipt"
+  "target": {
+    "purpose": "Prevent notebook outputs from becoming stronger artifact claims unless exact notebook lineage, policy-specific evaluation evidence, and distinct owner quorum all bind the same artifact.",
+    "central_bottleneck": "String-labelled evaluation and owner approval can be detached from notebook source, artifact content, policy requirements, and unique approving identities while still looking like a completed promotion."
+  },
+  "invariants": [
+    "strict promotion requires exact notebook source lineage rather than legacy unbound recording",
+    "cell identity cannot be rebound to different source or payload content",
+    "evaluation receipts bind exact artifact digest and promotion policy identity",
+    "the union of evaluation checks must satisfy the policy-specific required checks",
+    "owner approvals bind exact artifact digest and policy identity",
+    "owner quorum counts distinct owner IDs rather than approval rows",
+    "promotion proof content-addresses lineage, policy, evaluations, and distinct owner approvals",
+    "exact promotion replay is idempotent and different proof cannot rebind a completed promotion",
+    "production claims require a PRODUCTION-tier policy"
   ],
+  "promotion": {
+    "required_tests": ["python", "sql_fixture", "adversarial", "policy_specific_evaluation", "distinct_owner_quorum", "production_claim_ceiling"],
+    "require_exact_source_sha": true,
+    "require_receipt": true,
+    "require_nonclaims": true
+  },
   "donor_plan": {
-    "mode": "none",
+    "status": "RESOLVED",
+    "strategy": "INDEPENDENT_MECHANISM_PRESERVED",
     "donors": []
   },
-  "frozen_at": "2026-08-10T04:12Z"
+  "nonclaims": [
+    "no Databricks affiliation",
+    "no Databricks adoption",
+    "not a production notebook governance service",
+    "notebook source SHA is caller-supplied rather than externally attested",
+    "owner and evaluator identities are not cryptographically authenticated",
+    "promotion revocation is not implemented"
+  ],
+  "completed_evolution_receipt": "machine/evolution-receipts/2026-08-11-policy-quorum-artifact-promotion.json",
+  "next_evolution": "next:cryptographically_authenticated_owner_evaluator_identity_external_notebook_source_attestation_and_promotion_revocation"
 }
