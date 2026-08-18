@@ -4,7 +4,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 STATE = json.loads((ROOT / "machine" / "excellence-state.json").read_text(encoding="utf-8"))
-POSITION = json.loads((ROOT / "machine" / "canonical-position.json").read_text(encoding="utf-8"))
+POSITION = json.loads((ROOT / "machine" / "apex-position.json").read_text(encoding="utf-8"))
 TARGET = json.loads((ROOT / "machine" / "target-contract.json").read_text(encoding="utf-8"))
 RECEIPT_PATH = ROOT / "machine" / "evolution-receipts" / "2026-08-11-policy-quorum-artifact-promotion.json"
 RECEIPT = json.loads(RECEIPT_PATH.read_text(encoding="utf-8"))

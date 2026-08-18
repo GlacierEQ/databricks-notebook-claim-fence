@@ -4,16 +4,16 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 STATE = json.loads((ROOT / "machine" / "excellence-state.json").read_text(encoding="utf-8"))
-POSITION = json.loads((ROOT / "machine" / "canonical-position.json").read_text(encoding="utf-8"))
+POSITION = json.loads((ROOT / "machine" / "apex-position.json").read_text(encoding="utf-8"))
 CAPABILITIES = json.loads((ROOT / "machine" / "capabilities.json").read_text(encoding="utf-8"))
 
 
 class CanonicalPositionContractTests(unittest.TestCase):
     def test_evolving_state_is_gate_complete(self):
         self.assertEqual(STATE["principal_state"], "EVOLVING")
-        self.assertEqual(STATE["gates"]["CANONICAL_POSITION_RESOLVED"]["status"], "PASS")
+        self.assertEqual(STATE["gates"]["APEX_POSITION_RESOLVED"]["status"], "PASS")
         self.assertEqual(STATE["gates"]["EVOLUTION_CURSOR_DEFINED"]["status"], "PASS")
-        self.assertEqual(STATE["canonical_position_ref"], "machine/canonical-position.json")
+        self.assertEqual(STATE["apex_position_ref"], "machine/apex-position.json")
 
     def test_identity_and_lineage_are_preserved(self):
         self.assertEqual(POSITION["repository"], STATE["repository"])
